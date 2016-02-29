@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+/* text input ------------------------------------------- */
+.text-input {
+    padding: 0.5em 0.75em;
+    border: solid 1px #CCCCCC;
+    border-radius: 0.25em;
+    margin-left: 5px;
+}
+/*.text-input:focus {
+    outline: black dotted 1px;
+    outline: -moz-mac-focusring solid 3px;
+    outline: -webkit-focus-ring-color auto 5px;
+}*/
+
+/* text area ------------------------------------------- */
+.text-area {
+    padding: 0.5em 0.75em;
+    border: solid 1px #CCCCCC;
+    border-radius: 0.25em;
+    vertical-align: top;
+    margin-left: 5px;
+}
+/*.text-area:focus {
+    outline: black dotted 1px;
+    outline: -moz-mac-focusring solid 3px;
+    outline: -webkit-focus-ring-color auto 5px;
+}*/
+
+/* accessible placeholder */
+.placeholder {
+    position: relative;
+    display: inline-block;
+}
+.placeholder-label {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5em;
+    left: 0.5em;
+    color: #999999;
+}
+.placeholder-input {
+    padding: 0.55em 0.75em;
+    border: solid 1px #CCCCCC;
+    border-radius: 0.25em;
+}
+.placeholder-input:focus + .placeholder-label  {
+    visibility: hidden;
+}
+/*.placeholder-input:focus {
+    outline: black dotted 1px;
+    outline: -moz-mac-focusring solid 3px;
+    outline: -webkit-focus-ring-color auto 5px;
+}*/
+
+/* radio styles ------------------------------------------- */
+
+/* hide the radio input */
+.radio-input {
+    position: absolute;
+    left: -99em;
+}
+
+/* the labels styles */
+.radio-input + .radio-label {
+    margin-right: 5px;
+}
+
+/* style of radio label before element */
+.radio-input + .radio-label:before {
+    content: '\274C';
+}
+
+/* style of label's before element when checked */
+.radio-input:checked + .radio-label:before {
+    content: '\2705';
+}
+
+/* styling the label when focused */
+.radio-input:focus + .radio-label:before {
+    outline: black dotted 1px;
+    outline: -moz-mac-focusring solid 3px;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+
+/* radio button styles ------------------------------------------- */
+
+/* hide the radio input */
+.radio-button {
+    position: absolute;
+    left: -999em;
+}
+
+/* style of radio label */
+.radio-button + .radio-label {
+    padding: 10px;
+    display: inline-block;
+    border: solid 1px #CCCCCC;
+    margin-right: 5px;
+    border-radius: 0.25em;
+}
+
+/* style of label when checked */
+.radio-button:checked + .radio-label {
+    background-color: #666666;
+    color: #FFFFFF;
+}
+
+/* styling the label when focused */
+.radio-button:focus + .radio-label {
+    outline: black dotted 1px;
+    outline: -moz-mac-focusring solid 3px;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+/* checkbox styles ------------------------------------------- */
+
+/* hide the checkbox input */
+.checkbox-input {
+    position: absolute;
+    left: -999em;
+}
+
+/* the labels styles */
+.checkbox-input + .checkbox-label {
+    margin-right: 5px;
+}
+
+/* style of checkbox label before element */
+.checkbox-input + .checkbox-label:before {
+    content: '\274C';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
+}
+
+/* style of label's before element when checked */
+.checkbox-input:checked + .checkbox-label:before {
+    content: '\2705';
+}
+
+/* styling the label when focused */
+.checkbox-input:focus + .checkbox-label:before {
+    outline: black dotted 1px;
+    outline: -moz-mac-focusring solid 3px;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+/* checkbox button styles ------------------------------------------- */
+
+/* hide the checkbox input */
+.checkbox-button {
+    position: absolute;
+    left: -999em;
+}
+
+/* style of checkbox label */
+.checkbox-button + .checkbox-label {
+    padding: 10px;
+    display: inline-block;
+    border: solid 1px #CCCCCC;
+    margin-right: 5px;
+    border-radius: 0.25em;
+}
+
+/* style of label when checked */
+.checkbox-button:checked + .checkbox-label {
+    background-color: #666666;
+    color: #FFFFFF;
+}
+
+/* styling the label when focused */
+.checkbox-button:focus + .checkbox-label {
+    outline: black dotted 1px;
+    outline: -moz-mac-focusring solid 2px;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+/* dropdown select ------------------------------------------- */
+
+/* chosen JS */
+
+/*  styling the select */
+.select {
+    padding: 0.5em;
+    width: 200px;
+    border: solid 1px #CCCCCC;
+    border-radius: 0.25em;
+    font-size: 1em;
+    font-family: serif;
+    cursor: pointer;
+    margin-left: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: url(arrow.png) no-repeat right;
+    text-indent: 1px;
+    text-overflow: hidden;
+}
+.select::-ms-expand {
+    visibility: hidden;
+}
+/*.select:focus {
+    outline: black dotted 1px;
+    outline: -moz-mac-focusring solid 3px;
+    outline: -webkit-focus-ring-color auto 5px;
+}*/
+
+/* adding arrows to the wrapper */
+/*.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.select-wrapper:before {
+    content: '\25bc';
+    display: block;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    font-size: 0.75em;
+    margin-top: -0.5em;
+}*/
+
+/* button ------------------------------------------- */
+
+/* styleing the button */
+.button {
+    -webkit-appearance: none;
+    background-color: #FFFFFF;
+    padding: 0.5em 1em;
+    border: solid 1px #CCCCCC;
+    border-radius: 0.25em;
+    font-size: 1em;
+    font-family: serif;
+    cursor: pointer;
+}
+
+/* the style of the button when clicked */
+.button:active {
+    background-color: #666666;
+    color: #FFFFFF;
+}
+
+/*.button:focus {
+    outline: black dotted 1px;
+    outline: -moz-mac-focusring solid 3px;
+    outline: -webkit-focus-ring-color auto 5px;
+}*/
