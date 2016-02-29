@@ -1,0 +1,77 @@
+How to properly style form elements
+
+This tutorial will teach you how to best style various form elements with CSS.
+
+The goal for this article is to successfully style form elements with CSS without a line of javascript.
+
+
+TEXT INPUTS
+There is not much to be said here. Styling text inputs is easy. Chances are you are here reading this because you are trying to find a good solution to styling those tricker elements, you can find those below. But, just in case, here is an example of an text input being styled.
+
+// you just add styles to it like you would anything else. Just make sure the "for and id attribute match for accessibility.
+// Text inputs are by far the easiest to style. In fact, I probably don't even need to include them in this article, but just in case, here are a few tips. <One thing to keep in mind; it might be a good idea to add 'box-sizing: border-box;' to your input so that it is easier to size.>
+// Styling a text input is very straight-forward. Style it the way you would anything else; give it padding, a border, a width, a background color etc. and it will respond the way you would expect. 
+// One thing to be weary of is to not overwrite the outline style
+
+<label for="text-input">Text Input</label>
+<input id="text-input" type="text" class="text-input" />
+
+.text-input {
+    padding: 0.5em 0.75em;
+    border: solid 1px #CCCCCC;
+    border-radius: 0.25em;
+    margin-left: 5px;
+}
+
+RADIOS & CHECKBOXES
+The problem with styling these bad boys is that you cannot control their appearance the CSS; each browser has a standard for how their radios and checkboxes will look and you cannot change it. However, there is a slick way around this so that you can make your inputs look any way that you want.
+
+Start by creating the input and its respective label. Make sure to put them right next to each other; with the label after the input.
+
+<input id="checkbox" type="checkbox" name="checkbox">
+<label for="checkbox">Checkbox Label</label>
+
+[ EXAMPLE ]
+
+Since we cannot style the input we style the label instead.
+
+label {
+    padding: 10px;
+    display: inline-block;
+    border: solid 1px #CCCCCC;
+    margin-right: 5px;
+    border-radius: 0.25em;
+}
+
+[ EXAMPLE ]
+
+Next, we need the label to look different when the respective checkbox is checked. This is why it was so important to have the input and label next to each other. By using the "+" and ":checked" selector we can style the input's label for that state.
+
+input[type="checkbox"]:checked + label {
+    background-color: #666666;
+    color: #FFFFFF;
+}
+
+[ EXAMPLE ]
+
+Things are looking good, but we now to hide that checkbox. We cannot just set it's display to none because it would no longer be accessible. Here is what I like to do.
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -999em;
+}
+
+Finally, we just need to add some styles to that label on the focus event of the input so that keyboard users know when they are interacting with it
+
+input[type="checkbox"]:focus + label {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+
+
+*I would recommend using classes instead of styling the elements directly. I just did it that for the example for brevity's sake.
+
+
+Because of the id and for attribute, the two tags are inseperably connected. We can take advantage of this. When the label is clicked, it checks the checkbox and vice versa, this means that we do not need to even see the checkbox in order to check and uncheck it. Also, but utilizing the position of the two, we can use the "+" selector in CSS to style the label bacsed the state of the input.
+
+Here comes the beautiful part.
